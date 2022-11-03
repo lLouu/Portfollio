@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>LE BIHAN Guerric</title>
+        <link rel="stylesheet" href="css/norm.css">
+        <link rel="stylesheet" href="css/color.css">
+        <link rel="stylesheet" href="css/css.css">
+    </head>
+    <body>
+        <header>
+            <div class="button" data-goto="start"> .LE BIHAN</div>
+            <div class="button" data-goto="parcoure">Parcoure</div>
+            <div class="button" data-goto="competences">Compétences</div>
+            <div class="button" data-goto="portfolio">Portfolio</div>
+            <div class="button" data-goto="contact">Contact</div>
+            <div id="lang">
+                <img src="img/fr.svg" alt="FR" width="30px">
+                <img class="grayed" src="img/en.svg" alt="EN" width="30px">
+            </div>
+        </header>
+        <div id="main">
+            <div id="start">
+                <div id="posts">
+                    <div id="nom">GUERRIC LE BIHAN</div>
+                    <div id="devops" class="preset">
+                        DevSecOps
+                    </div>
+                    <div id="consultant" class="preset">
+                        Consultant
+                    </div>
+                    <div id="reseau" class="preset">
+                        Réseau
+                    </div>
+                    <div id="cta" class="button" data-goto="contact">Me Contacter</div>
+                </div>
+                <div id="portrait">
+                    <img src="img/Portrait.png" alt="Something went wrong...">
+                </div>
+            </div>
+            <div id="parcoure">
+                <div id="arrow">
+                    <img src="img/arrow.png" alt="Something went wrong">
+                    <div id="selector">
+                        <div class="selected" data-id="1">
+                            <div></div>
+                            <div class="desc">
+                                Master CSIG<br>2022-2024
+                            </div>
+                        </div>
+                        <div class="not-selected" data-id="2">
+                            <div></div>
+                            <div class="desc">
+                                Semestre internationale<br>Automne 2021
+                            </div>
+                        </div>
+                        <div class="not-selected" data-id="3">
+                            <div></div>
+                            <div class="desc">Licence en Informatique<br>2019-2022</div>
+                        </div>
+                        <div class="not-selected" data-id="4">
+                            <div></div>
+                            <div class="desc">Baccalauréat Scientifique<br>2019</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="details_title"></div>
+                <div id="details"></div>
+                <div id="p_title">Parcoure</div>
+            </div>
+            <div id="competences">
+                <div id="c_title">Compétences</div>
+                <div id="c_nav">
+                    <div id="haut">
+                        <div class="button sel" data-competences="softskills">SoftSkills</div>
+                        <div class="button" data-competences="language">Languagage de programmation</div>
+                    </div>
+                    <div id="bas">
+                        <div class="button" data-competences="environement">Environement</div>
+                        <div class="button" data-competences="outils">Outils</div>
+                        <div class="button" data-competences="comunication">Comunication</div>
+                    </div>
+                </div>
+                <div id="c_list">
+                    <div id="left_arrow"></div>
+                    <div id="c_content"></div>
+                    <div id="right_arrow"></div>
+                </div>
+            </div>
+            <div id="portfolio">
+                PORTFOLIO A VENIR
+            </div>
+            <div id="contact">
+                <div id="suivre">
+                    <a href="https://www.linkedin.com/in/guerric-le-bihan-915844197/"><img src="img/linkedin.png" alt="Linkdin"></a>
+                    <a href="https://github.com/lLouu"><img src="img/github.png" alt="GitHub"></a>
+                </div>
+                <div id="form">
+                    <div>
+                        <input type="text" id="id" placeholder="Nom">
+                        <input type="email" id="mail" placeholder="Email">
+                        <input type="tel" id="tel" placeholder="Téléphone">
+                        <select name="raison" id="raison">
+                            <option value="">-- Raison --</option>
+                            <option value="emploie">Emploie</option>
+                            <option value="stage">Stage</option>
+                            <option value="comission">Comission</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                        <input type="text" id="autre" placeholder="Si 'Autre', précisez">
+                    </div>
+                    <textarea></textarea>
+                    <div id="send">Envoyer</div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="flex" style="width: 80vw;">
+                    <div>V0.1.0 - 03/11/2022</div>
+                    <div>Fait par Guerric LE BIHAN</div>
+                    <div>Temp de travail : 8 heures</div>
+                </div>
+                <div>Coût total du site : 7,39€/an soit 0,62€/mois</div>
+            </div>
+        </div>
+        <div id="scroll">
+            <div id="s_start"></div>
+            <div id="s_parcoure"></div>
+            <div id="s_competences"></div>
+            <div id="s_portfolio"></div>
+            <div id="s_contact"></div>
+        </div>
+    </body>
+</html>
