@@ -6,14 +6,16 @@
         <link rel="stylesheet" href="css/norm.css">
         <link rel="stylesheet" href="css/color.css">
         <link rel="stylesheet" href="css/css.css">
+        <script src="js/data.js"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
         <header>
             <div class="button" data-goto="start"> .LE BIHAN</div>
-            <div class="button" data-goto="parcoure">Parcoure</div>
-            <div class="button" data-goto="competences">Compétences</div>
-            <div class="button" data-goto="portfolio">Portfolio</div>
-            <div class="button" data-goto="contact">Contact</div>
+            <div class="button" data-goto="parcoure"></div>
+            <div class="button" data-goto="competences"></div>
+            <div class="button" data-goto="portfolio"></div>
+            <div class="button" data-goto="contact"></div>
             <div id="lang">
                 <img src="img/fr.svg" alt="FR" width="30px">
                 <img class="grayed" src="img/en.svg" alt="EN" width="30px">
@@ -23,16 +25,10 @@
             <div id="start">
                 <div id="posts">
                     <div id="nom">GUERRIC LE BIHAN</div>
-                    <div id="devops" class="preset">
-                        DevSecOps
-                    </div>
-                    <div id="consultant" class="preset">
-                        Consultant
-                    </div>
-                    <div id="reseau" class="preset">
-                        Réseau
-                    </div>
-                    <div id="cta" class="button" data-goto="contact">Me Contacter</div>
+                    <div id="devops" class="preset"></div>
+                    <div id="consultant" class="preset"></div>
+                    <div id="reseau" class="preset"></div>
+                    <div id="cta" class="button" data-goto="contact"></div>
                 </div>
                 <div id="portrait">
                     <img src="img/Portrait.png" alt="Something went wrong...">
@@ -42,43 +38,39 @@
                 <div id="arrow">
                     <img src="img/arrow.png" alt="Something went wrong">
                     <div id="selector">
-                        <div class="selected" data-id="1">
-                            <div></div>
-                            <div class="desc">
-                                Master CSIG<br>2022-2024
-                            </div>
+                        <div class="selected" data-id="0">
+                            <div data-id="0"></div>
+                            <div class="desc" data-id="0"></div>
                         </div>
-                        <div class="not-selected" data-id="2">
-                            <div></div>
-                            <div class="desc">
-                                Semestre internationale<br>Automne 2021
-                            </div>
+                        <div data-id="1">
+                            <div data-id="1"></div>
+                            <div class="desc" data-id="1"></div>
                         </div>
-                        <div class="not-selected" data-id="3">
-                            <div></div>
-                            <div class="desc">Licence en Informatique<br>2019-2022</div>
+                        <div data-id="2">
+                            <div data-id="2"></div>
+                            <div class="desc" data-id="2"></div>
                         </div>
-                        <div class="not-selected" data-id="4">
-                            <div></div>
-                            <div class="desc">Baccalauréat Scientifique<br>2019</div>
+                        <div data-id="3">
+                            <div data-id="3"></div>
+                            <div class="desc" data-id="3"></div>
                         </div>
                     </div>
                 </div>
                 <div id="details_title"></div>
                 <div id="details"></div>
-                <div id="p_title">Parcoure</div>
+                <div id="p_title"></div>
             </div>
             <div id="competences">
-                <div id="c_title">Compétences</div>
+                <div id="c_title"></div>
                 <div id="c_nav">
                     <div id="haut">
-                        <div class="button sel" data-competences="softskills">SoftSkills</div>
-                        <div class="button" data-competences="language">Languagage de programmation</div>
+                        <div class="cbutton sel" data-competences="softskills"></div>
+                        <div class="cbutton" data-competences="language"></div>
                     </div>
                     <div id="bas">
-                        <div class="button" data-competences="environement">Environement</div>
-                        <div class="button" data-competences="outils">Outils</div>
-                        <div class="button" data-competences="comunication">Comunication</div>
+                        <div class="cbutton" data-competences="environement"></div>
+                        <div class="cbutton" data-competences="outils"></div>
+                        <div class="cbutton" data-competences="comunication"></div>
                     </div>
                 </div>
                 <div id="c_list">
@@ -88,7 +80,7 @@
                 </div>
             </div>
             <div id="portfolio">
-                PORTFOLIO A VENIR
+                
             </div>
             <div id="contact">
                 <div id="suivre">
@@ -97,29 +89,29 @@
                 </div>
                 <div id="form">
                     <div>
-                        <input type="text" id="id" placeholder="Nom">
-                        <input type="email" id="mail" placeholder="Email">
-                        <input type="tel" id="tel" placeholder="Téléphone">
+                        <input type="text" id="id">
+                        <input type="email" id="mail">
+                        <input type="tel" id="tel">
                         <select name="raison" id="raison">
-                            <option value="">-- Raison --</option>
-                            <option value="emploie">Emploie</option>
-                            <option value="stage">Stage</option>
-                            <option value="comission">Comission</option>
-                            <option value="autre">Autre</option>
+                            <option value=""></option>
+                            <option value="emploie"></option>
+                            <option value="stage"></option>
+                            <option value="comission"></option>
+                            <option value="autre"></option>
                         </select>
-                        <input type="text" id="autre" placeholder="Si 'Autre', précisez">
+                        <input type="text" id="autre">
                     </div>
                     <textarea></textarea>
-                    <div id="send">Envoyer</div>
+                    <div id="send"></div>
                 </div>
             </div>
             <div id="footer">
                 <div class="flex" style="width: 80vw;">
-                    <div>V0.1.0 - 03/11/2022</div>
-                    <div>Fait par Guerric LE BIHAN</div>
-                    <div>Temp de travail : 8 heures</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
-                <div>Coût total du site : 7,39€/an soit 0,62€/mois</div>
+                <div></div>
             </div>
         </div>
         <div id="scroll">
