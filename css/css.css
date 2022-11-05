@@ -238,6 +238,13 @@ header :nth-child(6){grid-column: 8;}
     align-items: center;
 }
 
+#c_content{
+    color: white;
+    display: grid;
+    grid-template-columns: 10px 70px 5px 70px 5px 70px 10px;
+    grid-template-rows: 10px 70px 5px 70px 5px 70px 10px;
+}
+
 #left_arrow, #right_arrow{
     border-top: 5px solid var(--arrow);
     border-left: 5px solid var(--arrow);
