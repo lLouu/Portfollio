@@ -1,4 +1,17 @@
+const scroll_array = ['start', 'parcoure', 'competences', 'portfolio', 'contact']
+let scroll_pos = 0;
 let is_fr = 1;
+let parcoure_sel = 0;
+let comp_sel = 0;
+let comp_animation = 300;
+let comp_auto_scroll = 3500;
+const update_scrollbar = (id) => {
+    if(id != scroll_pos){
+        document.getElementById('scroll').children[scroll_pos].classList.remove('here');
+        document.getElementById('scroll').children[id].classList.add('here');
+        scroll_pos = id;
+    }
+}
 const update_header = async (lang) => {
     document.querySelector('header').style.color = '#ffffff00';
     setTimeout(() => {
@@ -74,6 +87,7 @@ const update_placeholder = async (lang, ele) => {
 }
 
 const update_lang = async () => {
+    update_parcoure(parcoure_sel);
     let lang = is_fr ? 'fr' : 'en';
 
     update_header(lang);
@@ -89,9 +103,24 @@ const update_lang = async () => {
         update_placeholder(lang, ele);
     })
 }
+const update_parcoure = async (n) => {
+    let c = document.getElementById('selector').children;
+    c[parcoure_sel].classList.remove('selected');
+    parcoure_sel = n;
+    c[parcoure_sel].classList.add('selected');
+    let lang = is_fr ? 'fr' : 'en';
+    document.getElementById('details_title').innerHTML = content['parcoure'][lang][parcoure_sel][0];
+    document.getElementById('details').innerHTML = content['parcoure'][lang][parcoure_sel][1];
+}
 
 window.addEventListener('DOMContentLoaded', (event) => {
     update_lang();
+    document.querySelectorAll('.button').forEach(ele => {ele.onclick = (e) => {
+        document.getElementById('main').scrollBy({
+            top : document.getElementById(e.target.dataset.goto).getBoundingClientRect().y - 50,
+            behavior : 'smooth'
+        });
+    }});
     document.getElementById('lang').onclick = (e) => {
         let flags = document.getElementById('lang').children;
         flags[is_fr].classList.remove('grayed');
@@ -99,4 +128,31 @@ window.addEventListener('DOMContentLoaded', (event) => {
         flags[is_fr].classList.add('grayed');
         update_lang();
     }
+    
+    document.getElementById('main').addEventListener('scroll', (e) => {
+        update_scrollbar(scroll_array.indexOf(document.elementFromPoint(0, document.documentElement.scrollTop + document.documentElement.scrollHeight / 2).id));
+    });
+    document.getElementById('main').addEventListener('wheel', (e) => {
+        if(scroll_pos == 1){
+            let freeze = false;
+            if(e.deltaY > 0 && parcoure_sel < 3){
+                freeze = true;
+                update_parcoure(parcoure_sel + 1);
+            }
+            if(e.deltaY < 0 && parcoure_sel > 0){
+                freeze = true;
+                update_parcoure(parcoure_sel - 1);
+            }
+            if(freeze){
+                e.preventDefault();
+                document.getElementById('main').scrollBy({
+                    top : document.getElementById('parcoure').getBoundingClientRect().y - 50,
+                    behavior : 'smooth'
+                });
+            }
+        }
+    })
+    Array.from(document.getElementById('selector').children).forEach(ele => {ele.onclick = (e) => {
+        update_parcoure(e.target.dataset.id);
+    }});
 });

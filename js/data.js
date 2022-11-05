@@ -71,4 +71,42 @@ const content = {
             en: 'If Other, specify'
         }
     },
+    parcoure: {
+        fr: [
+            [
+                'Sécurité des Systèmes d\'Informations et Gouvernance', 
+                ''
+            ],
+            [
+                'Semestre Internationale à l\'UCC, Cork', 
+                ''
+            ],
+            [
+                'Licence en Informatique à l\'EFREI', 
+                ''
+            ],
+            [
+                'Découverte de l\'informatique', 
+                ''
+            ]
+        ],
+        en: [
+            [
+                'Information System Security and Governance', 
+                ''
+            ],
+            [
+                'International Semester at UCC, Cork', 
+                ''
+            ],
+            [
+                'Computer Science License at EFREI PARIS', 
+                ''
+            ],
+            [
+                'Discovering computer science', 
+                ''
+            ]
+        ]
+    },
 }
